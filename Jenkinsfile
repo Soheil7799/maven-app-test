@@ -7,12 +7,12 @@ pipeline {
             }
         }
         stage("test"){
-            step{
+            steps{
                 echo "here it should test the built app"
             }
         }
         stage("deploy"){
-            step{
+            steps{
                 echo "here is where we deploy the app"
             }
         }
