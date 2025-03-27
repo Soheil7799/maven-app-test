@@ -1,3 +1,9 @@
-def buildings() {
+def buildApp() {
     echo "lets build through scripts ..."
-} return this
+} 
+
+def deployApp() {
+    echo 'deploying the application...'
+} 
+
+return this

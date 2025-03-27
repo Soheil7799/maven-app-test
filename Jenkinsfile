@@ -20,7 +20,7 @@ pipeline {
                 echo "building application in Build step ..."
                 echo "build version ${NEW_VERSION}"
                 script{
-                    gv.buildings()
+                    gv.buildApp()
 
                 }
             }
