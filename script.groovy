@@ -7,7 +7,7 @@ def testApp(){
     echo "testing the application"
     sh "mvn test"
 }
-def dockerLogin(String user, String password){
+def dockerLogin(String username, String password){
     sh """
         echo "logging out"
         docker logout
