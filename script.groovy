@@ -22,7 +22,7 @@ def deployApp() {
     sh """
     echo 'deploying the application...'
     
-    docker build -t soheiliam/demo-jenkins:${params.VERSION}
+    docker build -t soheiliam/demo-jenkins:${params.VERSION} .
     docker push soheiliam/demo-jenkins:${params.VERSION}
     """
 } 
