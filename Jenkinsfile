@@ -2,11 +2,11 @@ def gv
 pipeline {
     agent any
     parameters{
-        choice(name: "VERSION",choices:["1.3.0", "1.4.0","1.5.0"],description:"Choose the version you are going to deploy")
+        choice(name: "NEW_VERSION",choices:["1.3.0", "1.4.0","1.5.0"],description:"Choose the version you are going to deploy")
     }
-    environment{
-        NEW_VERSION = '1.3.0'
-    }
+    // environment{
+    //     NEW_VERSION = '1.3.0'
+    // }
     stages{
         stage("init"){
             steps{
