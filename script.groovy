@@ -5,6 +5,7 @@ def buildApp() {
 
 def deployApp() {
     echo 'deploying the application...'
+    echo "environment to deploy: ${params.DEPLOY_ENV} "
 } 
 
 return this
