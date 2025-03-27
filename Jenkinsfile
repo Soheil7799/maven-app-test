@@ -20,7 +20,7 @@ pipeline {
                 message "write the Version to deploy"
                 ok "version selected"
                 parameters{
-                    string(name:"NEW_VESION",def:"",description:"version")
+                    string(name:"NEW_VESION",defaultValue:"",description:"version")
                 }
             }
             steps{
