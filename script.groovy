@@ -12,6 +12,18 @@
 //     }
 // } 
 
+def dockerLogin(String username, String password){
+    sh """
+        echo "logging out"
+        docker logout
+        echo "logging in"
+        docker login -u ${username} -p ${password}
+    """
+
+}
+def deployApp() {
+    // echo "environment to deploy: ${params.DEPLOY_ENV} "
+
     sh """
     echo 'deploying the application...'
     
