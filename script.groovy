@@ -1,23 +1,16 @@
-def buildApp() {
-    echo "lets build through scripts ..."
-    // echo "getting version info through scripts. Version : ${params.NEW_VERSION}"
-    sh "mvn package"
-} 
-def testApp(){
-    echo "testing the application"
-    sh "mvn test"
-}
-def dockerLogin(String username, String password){
-    sh """
-        echo "logging out"
-        docker logout
-        echo "logging in"
-        docker login -u ${username} -p ${password}
-    """
+// def buildJar() {
+//     echo "building the application..."
+//     sh 'mvn package'
+// } 
 
-}
-def deployApp() {
-    // echo "environment to deploy: ${params.DEPLOY_ENV} "
+// def buildImage() {
+//     echo "building the docker image..."
+//     withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+//         sh 'docker build -t nanajanashia/demo-app:jma-2.0 .'
+//         sh "echo $PASS | docker login -u $USER --password-stdin"
+//         sh 'docker push nanajanashia/demo-app:jma-2.0'
+//     }
+// } 
 
     sh """
     echo 'deploying the application...'
