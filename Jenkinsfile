@@ -33,19 +33,19 @@ pipeline {
                 script {
                     echo "building image"
                     //gv.buildImage()
-                    buildImage()
+                    buildImage 'soheiliam/demo-jenkins:sh-1.1'
                 }
             }
         }
-        stage('deploy') {
-            steps{
-                script{
-            withCredentials([usernamePassword(credentialsId:'docker-hub-repo',usernameVariable: 'USER' , passwordVariable: 'PWD')]){
-                gv.dockerLogin(USER , PWD)
-            }
-            gv.deployApp()
-                }
-            }
+        // stage('deploy') {
+        //     steps{
+        //         script{
+        //     withCredentials([usernamePassword(credentialsId:'docker-hub-repo',usernameVariable: 'USER' , passwordVariable: 'PWD')]){
+        //         gv.dockerLogin(USER , PWD)
+        //     }
+        //     gv.deployApp()
+        //         }
+        //     }
         }
     }
 }
