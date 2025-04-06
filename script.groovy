@@ -1,5 +1,6 @@
 def buildApp() {
     echo "lets build through scripts ..."
+    echo "this is the test for integration !"
     // echo "getting version info through scripts. Version : ${params.NEW_VERSION}"
     sh "mvn package"
 } 
