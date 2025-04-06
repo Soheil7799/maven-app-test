@@ -1,6 +1,7 @@
 def buildApp() {
     echo "lets build through scripts ..."
     echo "this is the test for integration !"
+    echo "this is the test for multi in jenkins-jobs !"
     // echo "getting version info through scripts. Version : ${params.NEW_VERSION}"
     sh "mvn package"
 } 
